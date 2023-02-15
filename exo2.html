@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exo2.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="parentBox">
+        <button  class="carre" id="carre1">Click Me1</button>
+        <button  class="carre" id="carre2">Click Me2</button>
+        <button  class="carre" id="carre3">Click Me3</button>
+        <button  class="carre" id="carre4">Click Me4</button>
+    </div>
+
+    <script>
+ document.getElementById("carre1").addEventListener("click",tourneCarre);
+ document.getElementById("carre2").addEventListener("click",tourneCarre);
+ document.getElementById("carre3").addEventListener("click",tourneCarre);
+ document.getElementById("carre4").addEventListener("click",tourneCarre);
+
+
+ function tourneCarre(event){
+    const carre = event.target;
+    carre.classList.add("red")
+    carre.classList.add("rotate")
+ }
+
+    </script>
+
+    </main>
+</body>
+</html>
