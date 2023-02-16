@@ -9,6 +9,8 @@
 </head>
 <body>
     <h1>Morpion</h1>
+    <div id="msg"></div>
+    <div id="tour"></div>
     <main>
     <div class="groupeCarre">
         <button class="carre" id="carre1"></button>
@@ -35,23 +37,28 @@
 
         var joueur = "X"
         var innerCarre = document.getElementById("carre9").innerHTML
+        var msgErreur="Case déja utilisé"
+        tourJoueur()
         function selectCarre(event){
             const carre = event.target;
-            carre.innerHTML =joueur //innerHTML affiche du text
-           if(joueur == "X"){
-            joueur = "O"
-           }
-           else {
-            joueur ="X"
-           }
-        }
-        function stopSelect(){
-            if (carre == innerCarre){
-                carre.innerHTML
+            if (carre.innerHTML == innerCarre){ //si la case est  vide
+                carre.innerHTML =joueur //innerHTML affiche du text
+               if(joueur == "X"){
+                joueur = "O"
+               }
+               else {
+                joueur ="X"
+               }
+            }else{
+                document.getElementById("msg").innerHTML = msgErreur//affiche var msgErreur dans div "msg"
             }
-            else{
-                alert("case déja utilisé" )
-            }
+            tourJoueur()
+                }
+        function tourJoueur(){
+          
+                document.getElementById("tour").innerHTML = "C'est au tour de " + joueur//affiche "string" + var joueur
+            
+            
         }
     </script>
 </main> 
