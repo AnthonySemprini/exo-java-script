@@ -33,8 +33,8 @@
         document.getElementById("carre8").addEventListener("click", selectCarre);
         document.getElementById("carre9").addEventListener("click", selectCarre);
 
-
         var joueur = "X"
+        var innerCarre = document.getElementById("carre9").innerHTML
         function selectCarre(event){
             const carre = event.target;
             carre.innerHTML =joueur //innerHTML affiche du text
@@ -44,7 +44,14 @@
            else {
             joueur ="X"
            }
-
+        }
+        function stopSelect(){
+            if (carre == innerCarre){
+                carre.innerHTML
+            }
+            else{
+                alert("case déja utilisé" )
+            }
         }
     </script>
 </main> 
