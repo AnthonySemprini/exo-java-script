@@ -33,10 +33,16 @@
         document.getElementById("carre8").addEventListener("click", selectCarre);
         document.getElementById("carre9").addEventListener("click", selectCarre);
 
+
+        var joueur = "X"
         function selectCarre(event){
             const carre = event.target;
-           if(carre.classList.add("red")){
-            nextCarre
+            carre.innerHTML =joueur //innerHTML affiche du text
+           if(joueur == "X"){
+            joueur = "O"
+           }
+           else {
+            joueur ="X"
            }
 
         }

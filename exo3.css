@@ -17,6 +17,7 @@ h1{
 }
 
 .carre{
+    font-size: 150px;
     background-color: gray;
     height: 200px;
     width: 200px;
@@ -25,6 +26,7 @@ h1{
 }
 .carre.red{   
     background-color: red;
+    content : "X";
 }
 .carre.green{   
     background-color:green;
