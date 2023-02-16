@@ -1,28 +1,37 @@
-main{
-    height: 100vh;
+    *{
+    }
+    main{
+        background-image: url(media/fond-ecran-morpion.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items:flex-start;
 }
+
 h1{
+    display: flex;
     text-align: center;
     font-size: 150px;
 }
 #msg{
-    
+    display: flex;
     text-align: center;
     font-size: 30px;
     color: red;
     margin-bottom: 30px;
 }
 #tour{
+    display: flex;
     text-align: center;
     font-size: 30px;
     color: green;
     margin-bottom: 30px; 
 }
 .groupeCarre{
+    display: flex;
     height:660px ;
     width: 660px;
     display: flex;
@@ -30,17 +39,26 @@ h1{
 }
 
 .carre{
+   
     font-size: 150px;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.549);
     height: 200px;
     width: 200px;
     margin : 10px;
 
 }
-.carre.red{   
+#fin{
+    display: flex;
+text-align: center;
+font-size: 30px;
+color:blue;
+margin-bottom: 30px; 
+}
+
+/* .carre.red{   
     background-color: red;
     content : "X";
 }
 .carre.green{   
     background-color:green;
-}
+} */

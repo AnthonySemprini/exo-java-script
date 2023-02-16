@@ -8,10 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Morpion</h1>
-    <div id="msg"></div>
-    <div id="tour"></div>
     <main>
+        <h1>Morpion</h1>
+        <div id="msg"></div>
+        <div id="tour"></div>
+        <div id="fin"></div>
     <div class="groupeCarre">
         <button class="carre" id="carre1"></button>
         <button class="carre" id="carre2"></button>
@@ -23,7 +24,7 @@
         <button class="carre" id="carre8"></button>
         <button class="carre" id="carre9"></button>
     </div>
-
+   
     <script>
         document.getElementById("carre1").addEventListener("click", selectCarre);
         document.getElementById("carre2").addEventListener("click", selectCarre);
@@ -39,28 +40,43 @@
         var innerCarre = document.getElementById("carre9").innerHTML
         var msgErreur="Case déja utilisé"
         tourJoueur()
+        var coup = 0
         function selectCarre(event){
             const carre = event.target;
             if (carre.innerHTML == innerCarre){ //si la case est  vide
                 carre.innerHTML =joueur //innerHTML affiche du text
                if(joueur == "X"){
                 joueur = "O"
+                console.log(coup)
                }
                else {
                 joueur ="X"
-               }
-            }else{
-                document.getElementById("msg").innerHTML = msgErreur//affiche var msgErreur dans div "msg"
             }
-            tourJoueur()
-                }
-        function tourJoueur(){
-          
-                document.getElementById("tour").innerHTML = "C'est au tour de " + joueur//affiche "string" + var joueur
+            coup++//permet d'ajouter 1 a chaque coup
+            console.log(coup)
+            finDePartie()//appel de la fonction
             
-            
+        }else{
+            document.getElementById("msg").innerHTML = msgErreur//affiche var msgErreur dans div "msg"
         }
+        tourJoueur()
+    }
+    function tourJoueur(){
+        
+        document.getElementById("tour").innerHTML = "C'est au tour de " + joueur//affiche "string" + var joueur
+    }
+
+
+function finDePartie(){//fonction qui stop la partie a 9 coup
+    if (coup == 9){
+        document.getElementById("fin").innerHTML = "La partie est términée!!!"
+    }
+}
+    // document.getElementById("nbCoup").innerHTML =  coup
+
+           
     </script>
 </main> 
+
 </body>
 </html>
