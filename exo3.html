@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exo3.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Morpion</h1>
+    <main>
+    <div class="groupeCarre">
+        <button class="carre" id="carre1"></button>
+        <button class="carre" id="carre2"></button>
+        <button class="carre" id="carre3"></button>
+        <button class="carre" id="carre4"></button>
+        <button class="carre" id="carre5"></button>
+        <button class="carre" id="carre6"></button>
+        <button class="carre" id="carre7"></button>
+        <button class="carre" id="carre8"></button>
+        <button class="carre" id="carre9"></button>
+    </div>
+
+    <script>
+        document.getElementById("carre1").addEventListener("click", selectCarre);
+        document.getElementById("carre2").addEventListener("click", selectCarre);
+        document.getElementById("carre3").addEventListener("click", selectCarre);
+        document.getElementById("carre4").addEventListener("click", selectCarre);
+        document.getElementById("carre5").addEventListener("click", selectCarre);
+        document.getElementById("carre6").addEventListener("click", selectCarre);
+        document.getElementById("carre7").addEventListener("click", selectCarre);
+        document.getElementById("carre8").addEventListener("click", selectCarre);
+        document.getElementById("carre9").addEventListener("click", selectCarre);
+
+        function selectCarre(event){
+            const carre = event.target;
+           if(carre.classList.add("red")){
+            nextCarre
+           }
+
+        }
+    </script>
+</main> 
+</body>
+</html>
