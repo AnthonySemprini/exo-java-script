@@ -1,35 +1,45 @@
-    *{
-    }
+    /* *{
+        margin: 0;
+	padding: 0;
+	
+    } */
     main{
         background-image: url(media/fond-ecran-morpion.jpg);
         background-repeat: no-repeat;
-        background-size: contain;
-     height: 100vh;
-    width: 100vw;
+        background-size:cover;
+        background-position: center;
+     height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items:flex-start;
+    align-items:center;
 }
 
 h1{
     display: flex;
+    align-content: flex-start;
     text-align: center;
     font-size: 150px;
+   
 }
-#msg{
+.info{
     display: flex;
-    text-align: center;
+    flex-direction: column;
     font-size: 30px;
+}
+
+#msg{
     color: red;
-    margin-bottom: 30px;
 }
 #tour{
-    display: flex;
-    text-align: center;
-    font-size: 30px;
     color: green;
-    margin-bottom: 30px; 
 }
+#fin{
+color:blue;
+}
+
 .groupeCarre{
     display: flex;
     height:660px ;
@@ -46,13 +56,6 @@ h1{
     width: 200px;
     margin : 10px;
 
-}
-#fin{
-    display: flex;
-text-align: center;
-font-size: 30px;
-color:blue;
-margin-bottom: 30px; 
 }
 
 /* .carre.red{   
