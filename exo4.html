@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exo4.css">
+    <title>Exercice4</title>
+</head>
+<body>
+    <div class="square"></div>
+    <script>
+        let square =[]; //tableaux pour stock square
+
+        //fonction qui defini couleur
+        function createSquare(){
+            let square = document.createElement('div');
+            document.body.appendChild(square);
+            squares.push(square);
+            }
+
+            function removeSquare() { //suprime carre ajouter
+                let square = squares.pop();
+                square.parentNode.removeChild(square);
+            }
+
+            // ecoute les evenement clavier
+            document.addEventListener('keydown',function(event){
+
+            if (event.keyCode){
+                createSquare();
+            }
+            else if (event.keyCode){
+                removeSquare();
+            }
+        });
+
+
+    </script>
+</body>
+</html>
