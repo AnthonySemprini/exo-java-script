@@ -3,13 +3,15 @@
             display: flex;
             flex-wrap: wrap;
             align-content: flex-start;
-			height: 1000px;
-			width: 2000px;
+            align-items: center;
+            /* justify-content: center; */
+			height: 960px;
+			width: 960px;
 			border: 1px solid black;
         }
 		.square {
-			height: 50px;
-			width: 50px;
+			height: 60px;
+			width: 60px;
 			/* background-color: blue; */
             border: 1px black solid;
 			

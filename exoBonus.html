@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exo4.css">
+    
+    <title>Créer un carré en JavaScript</title>
+	
+</head>
+<body>
+    <div id="container">
+		<div class="square"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            
+            const container = document.getElementById('container');
+            
+      
+            document.addEventListener('keydown', function(event) {
+           
+            const square = document.createElement('div');
+                square.className = 'square';
+                container.appendChild(square);
+            
+              const squares = document.querySelectorAll('.square');
+              
+            
+          }); 
+          
+      
+              //Ajouter un bouton pour effacer les carrés
+      const clearBtn = document.createElement('button');
+      clearBtn.textContent = "Effacer";
+      document.body.appendChild(clearBtn);
+      
+      clearBtn.addEventListener('click', function() {
+        const squares = document.querySelectorAll('.square');
+        for (let i = 0; i < squares.length; i++) {
+          squares[i].parentNode.removeChild(squares[i]);
+        }
+      });
+      
+          
+          </script>
+      </body>
+      </html>

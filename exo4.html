@@ -22,16 +22,36 @@
 	  
 	  const container = document.getElementById('container');
 	  
+
 	  document.addEventListener('keydown', function(event) {
-		  const square = document.createElement('div');
+      if(event.key === 'ArrowDown'){
+      const square = document.createElement('div');
 		  square.className = 'square';
 		  container.appendChild(square);
-		  // couleur aleatoire de chaque square 
-		  square.style.backgroundColor= '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-		
-		
-		});
+      square.style.backgroundColor= '#'+(Math.random()*0xFFFFFF<<0).toString(16);  //couleur aleatoire de chaque square 
+      }else if (event.key === 'ArrowUp'){
+        const squares = document.querySelectorAll('.square');
+        if (squares.length > 0){
+          squares[squares.length -1].parentNode.removeChild(squares[squares.length -1]);
+         
+        }
+      }
+    }); 
+    
 
+		//Ajouter un bouton pour effacer les carrés
+const clearBtn = document.createElement('button');
+clearBtn.textContent = "Effacer";
+document.body.appendChild(clearBtn);
+
+clearBtn.addEventListener('click', function() {
+  const squares = document.querySelectorAll('.square');
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].parentNode.removeChild(squares[i]);
+  }
+});
+
+	
     </script>
 </body>
 </html>
