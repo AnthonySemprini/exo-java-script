@@ -5,36 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="exo4.css">
-    <title>Exercice4</title>
+    
+    <title>Créer un carré en JavaScript</title>
+	
 </head>
 <body>
-    <div class="square"></div>
-    <script>
-        let square =[]; //tableaux pour stock square
+    <div id="container">
+		<div class="square"></div>
 
-        //fonction qui defini couleur
-        function createSquare(){
-            let square = document.createElement('div');
-            document.body.appendChild(square);
-            squares.push(square);
-            }
+	</div>
+	
 
-            function removeSquare() { //suprime carre ajouter
-                let square = squares.pop();
-                square.parentNode.removeChild(square);
-            }
-
-            // ecoute les evenement clavier
-            document.addEventListener('keydown',function(event){
-
-            if (event.keyCode){
-                createSquare();
-            }
-            else if (event.keyCode){
-                removeSquare();
-            }
-        });
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+	  
+	  
+	  const container = document.getElementById('container');
+	  
+	  document.addEventListener('keydown', function(event) {
+		  const square = document.createElement('div');
+		  square.className = 'square';
+		  container.appendChild(square);
+		  // couleur aleatoire de chaque square 
+		  square.style.backgroundColor= '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+		
+		
+		});
 
     </script>
 </body>
