@@ -7,17 +7,25 @@
     <link rel="stylesheet" href="exo5.css">
     <title>Document</title>
 </head>
-<body>
-    <div id="container">
-        <div class="converter">
-            <p>Valeur en euros</p>
-            <input type="number" class="euro" placeholder="Montant en Euros">
-        </div>
-    </div> 
 
-    <script>
-        var euro = document.guetElementByClassname("euro").value
-        console.log(value)
-    </script>
+<body>
+
+	<div id="container">
+
+		<div id="converter">
+			<label for="euro">Valeurs en euros</label>
+			<input id="euro" type="number" name="euro" placeholder="€€€">
+			<p id="francs"></p>
+		</div>
+
+	</div>
+	<script>
+		var euro = document.getElementById("euro");
+		euro.addEventListener('input', function () {
+			document.getElementById("francs").innerHTML = Number((euro.value * 6.55957).toFixed(2)) + "= francs"
+		})
+	</script>
+
 </body>
+
 </html>

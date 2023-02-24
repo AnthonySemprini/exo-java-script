@@ -6,7 +6,7 @@
     height: 100vh;
     width: 100vw;
 }
-.converter{
+#converter{
     background-color: rgba(99, 220, 165, 0.8);
     border-radius: 30px;
     border: 2px black solid;
@@ -19,6 +19,6 @@
     font-size: 50px;
     
 }
-.euro{
+#euro{
     font-size: 50px;
 }
